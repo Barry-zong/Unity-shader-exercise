@@ -37,6 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
+     <None Include="Assets\Shader\ClassTry1.shader" />
      <None Include="Assets\Shader\SampleShader.shader" />
      <None Include="Assets\Shader\MyFirstShader.shader" />
     <Reference Include="UnityEngine">
