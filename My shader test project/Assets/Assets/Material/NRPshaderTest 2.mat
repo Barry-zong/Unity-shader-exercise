@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: NRPshaderTest
+  m_Name: NRPshaderTest 2
   m_Shader: {fileID: 4800000, guid: 7c253abda1e8c90428a02a3faf09deaa, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -45,7 +45,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 833367700bf81bc43a16e0e1bea71cce, type: 3}
+        m_Texture: {fileID: 10307, guid: 0000000000000000f000000000000000, type: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -69,7 +69,7 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _LuTV: 0.244
+    - _LuTV: 0.209
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
@@ -77,12 +77,12 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _StrokeSize: 0.4
+    - _StrokeSize: 0.47
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _MainColor: {r: 1, g: 1, b: 1, a: 1}
-    - _StrokeColor: {r: 0, g: 0, b: 0, a: 1}
+    - _StrokeColor: {r: 0.06406224, g: 0.23584905, b: 0.03263318, a: 1}
   m_BuildTextureStacks: []
