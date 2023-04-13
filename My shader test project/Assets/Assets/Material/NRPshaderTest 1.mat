@@ -80,7 +80,7 @@ Material:
     - _GlossValue: 0.55
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _LuTV: 0.39
+    - _LuTV: 0.51
     - _Metallic: 0
     - _Mode: 0
     - _NormalScale: 1
