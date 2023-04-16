@@ -12,13 +12,15 @@ Shader "Unlit/NPR_3_2Render_update"
         [HDR]_HighLightColor("High Light Color",Color) = (1.0,1.0,1.0,1.0)
         _Specular("Specular",Range(0.01,1)) = 0.5
         _Lut ("Lut",2D) = "white" {}
-        _LuTV("Lut V",Range(0.0,1.0)) = 0.5
+       // _LuTV("Lut V",Range(0.0,1.0)) = 0.5
         _StrokeSize("Stroke Size",float)=0.0
-        _StrokeColor("Stroke Color",Color) = (1.0,0.0,0.0,1.0)
-        [HDR]_FresnelColor("Fresnel Color",Color) = (1.0,1.0,1.0,1.0)
-        _FresnelColorDown("Fresnel Color Down",Color) = (1.0,1.0,1.0,1.0)
-        _FresnelPowel("Fresnel power",Range(0.01,1)) = 0.5
-        _FresnelIntensity("Fresnel Intensity",Range(0,1)) = 0.5
+        [HDR]_StrokeColor("Stroke Color",Color) = (1.0,0.0,0.0,1.0)
+        [HDR]_FresnelColor("Fresnel Up Color",Color) = (1.0,1.0,1.0,1.0)
+        _FresnelUpIntensity("Fresnel Up Intensity",Range(0,1)) = 0.5
+        _FresnelUpPowel("Fresnel Up power",Range(0.01,1)) = 0.5
+        _FresnelColorDown("Fresnel Down Color",Color) = (1.0,1.0,1.0,1.0)
+        _FresnelDownInt("Fresnel Down Intensity",Range(0.01,1)) = 0.5
+        _FresnelDownPowel("Fresnel Down power",Range(0.01,1)) = 0.5
         _CubeMap("cube Map",Cube)= "_Skybox" {}
         _MetalInt("Metal Intensity",Range(0.01,1)) = 0.5
         _Roughness("Roughness",Range(0,0.9)) = 0
@@ -125,8 +127,10 @@ Shader "Unlit/NPR_3_2Render_update"
             float3 _FresnelColorDown;
             float _MetalInt;
             float _Roughness;
-            float _FresnelPowel;
-            float _FresnelIntensity;
+            float _FresnelUpPowel;
+            float _FresnelDownPowel;
+            float _FresnelDownInt;
+            float _FresnelUpIntensity;
             samplerCUBE _CubeMap;
 
             v2f vert (a2v v)
@@ -180,7 +184,7 @@ Shader "Unlit/NPR_3_2Render_update"
                 float ao = pow(MaskMapValue.b,_AOstrengh*50);
                 float SelfLig = MaskMapValue.w;
                 float3 Diffuse = DiffuseColor * halfLambert * _LightColor0 * ao;
-                float3 Specular = pow(saturate(NoR),_Gloss*256)*_Specular * _SpecularColor;
+                float3 Specular = pow(saturate(NoR),_Gloss*256)*_Specular * _SpecularColor ;
 
                 //_CubeMap    metal effect
                 
@@ -189,9 +193,9 @@ Shader "Unlit/NPR_3_2Render_update"
                 
                 //Fresnel effect
 
-                float3 Fresnel =pow(saturate(NoV),_FresnelPowel*15) * _FresnelColor * _FresnelIntensity * saturate(NormalWS.y) * var_CubeMap ;
-                float3 FresnelDown =step(0.3, pow(saturate(NoV),_FresnelPowel*15)) * _FresnelColorDown * _FresnelIntensity * saturate(-NormalWS.y);
-               
+                float3 Fresnel =pow(saturate(NoV),_FresnelUpPowel*15) * _FresnelColor * _FresnelUpIntensity * saturate(NormalWS.y) * var_CubeMap ;
+                //float3 FresnelDown =step(1 * _SmoothRange ,pow(1-(pow(saturate(NoV), _FresnelDownPowel*15) * saturate(-NormalWS.y)),300 * _FresnelDownInt)) + _FresnelColorDown;
+                 float3 FresnelDown =pow(1-(pow(saturate(NoV), _FresnelDownPowel*15) * saturate(-NormalWS.y)),300 * _FresnelDownInt) + _FresnelColorDown * saturate(-NormalWS.y);
                 //Ambient ground color
                 
                 float3 AmbientGc = lerp(_AmbientColor,_AmbientColorGround,-NormalWS.y) *DiffuseColor ;
@@ -201,10 +205,10 @@ Shader "Unlit/NPR_3_2Render_update"
                 float3 Highlight = _HighLightColor * SelfLig ;
 
                 //Final output
-                float3 FinalColor = Diffuse + Specular + AmbientGc + Fresnel + FresnelDown + metalValue + Highlight;
+                float3 FinalColor = (Diffuse + Specular + AmbientGc + Fresnel + metalValue + Highlight) * FresnelDown;
 
                 return float4(FinalColor,1.0);
-                //return float4(SelfLig.xxx,1.0);
+                //return float4( FresnelDown,1.0);
                 
             }
 
