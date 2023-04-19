@@ -102,7 +102,7 @@ Material:
     - _Specular: 1
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _StrokeSize: 0.0025
+    - _StrokeSize: 0.52
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
@@ -115,5 +115,5 @@ Material:
     - _HighLightColor: {r: 0.3137255, g: 0.6901961, b: 2.9960785, a: 1}
     - _MainColor: {r: 1, g: 1, b: 1, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
-    - _StrokeColor: {r: 0.1792453, g: 0.045185167, b: 0.021419233, a: 1}
+    - _StrokeColor: {r: 0.14150941, g: 0.011672481, b: 0.008899948, a: 1}
   m_BuildTextureStacks: []

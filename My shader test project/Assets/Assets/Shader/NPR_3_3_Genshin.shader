@@ -44,6 +44,7 @@ Shader "Unlit/NPR_3_3_Genshin"
 
             struct a2v
             {
+                float4 color : COLOR; //vertaexColor
                 float4 vertex : POSITION;
                 float3 normal : NORMAL;
                 float2 uv : TEXCOORD0;
@@ -62,8 +63,9 @@ Shader "Unlit/NPR_3_3_Genshin"
             {
                 v2f o;
                 o.uv = v.uv;
+                v.color ;
                 //float3 controlValue = tex2D(_StrokeControl, v.uv);
-                v.vertex.xyz += v.normal*0.01*_StrokeSize /* * controlValue */ ;
+                v.vertex.xyz += v.normal*0.0001*_StrokeSize*v.color ;
                 o.pos = UnityObjectToClipPos(v.vertex);
                 return o;
             }
@@ -159,7 +161,8 @@ Shader "Unlit/NPR_3_3_Genshin"
                 float3 normalTS = UnpackNormalWithScale( tex2D(_NormalTex,i.uv0.zw),_NormalScale);
                 float3x3 TBN = float3x3(normalize(i.worldTangent),normalize(i.worldBitTangent),normalize(i.worldNormal));
 
-                float3 NormalWS = mul(normalTS,TBN) ;
+               // float3 NormalWS = mul(normalTS,TBN) ;
+                float3 NormalWS = normalize(i.worldNormal)  ;
                 float3 LightDir = normalize(i.LightDir);
                 float3 ViewDir = normalize(i.viewDir);
                 float3 VrDir = reflect(-ViewDir,NormalWS);

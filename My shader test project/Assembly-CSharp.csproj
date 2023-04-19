@@ -36,10 +36,12 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Assets\Scripts\ConnectTest.cs" />
      <Compile Include="Assets\Assets\Scripts\Rotate.cs" />
      <None Include="Assets\Assets\Shader\NPR_3_2Render 1.shader" />
      <None Include="Assets\Assets\Shader\NPR_3_3_Genshin.shader" />
      <None Include="Assets\Assets\Shader\NPR_3_3Shadow.shader" />
+     <None Include="Assets\Assets\Shader\VertaxView.shader" />
      <None Include="Assets\Assets\Shader\NPR_3_2Render_update.shader" />
     <Reference Include="UnityEngine">
         <HintPath>D:\Unity\UnityDifferentVertions\2021.3.16f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>

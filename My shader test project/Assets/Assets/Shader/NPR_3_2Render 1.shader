@@ -19,6 +19,8 @@ Shader "Unlit/NPR_3_2Render"
     }
     SubShader
     {
+        
+        
         Tags { "RenderType"="Opaque" }
         LOD 100
 
@@ -94,6 +96,7 @@ Shader "Unlit/NPR_3_2Render"
                 float3 viewDir : TEXCOORD5;
                 float3 worldTangent : TEXCOORD6;
                 float3 worldBitTangent : TEXCOORD7;
+                
 
             };
 

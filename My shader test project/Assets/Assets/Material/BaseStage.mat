@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Qin's hear
-  m_Shader: {fileID: 4800000, guid: e5cf6a62b87dcf84ea387196c54cf1ba, type: 3}
+  m_Name: BaseStage
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -22,10 +22,6 @@ Material:
     m_TexEnvs:
     - _BumpMap:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _CubeMap:
-        m_Texture: {fileID: 8900000, guid: 852e566bdf54e4f4290b0dd8f37524f2, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -44,23 +40,11 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _GlossTex:
-        m_Texture: {fileID: 2800000, guid: aad4ae57bb71e234dadc6b06878c7279, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Lut:
-        m_Texture: {fileID: 2800000, guid: b50daf248358f5c4187fa7d7bb760ac5, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 30ce50ec84b037c46a430eeeffc5d9a6, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MetallicGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _NormalTex:
+    - _MetallicGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -72,48 +56,25 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _StrokeControl:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AOstrengh: 1
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _FresnelDownInt: 0.5
-    - _FresnelDownPowel: 0.5
-    - _FresnelUpIntensity: 0.45
-    - _FresnelUpPowel: 0.25
     - _GlossMapScale: 1
-    - _Glossiness: 0.5
+    - _Glossiness: 0.54
     - _GlossyReflections: 1
-    - _LuTV: 0
-    - _MetalInt: 0.5
-    - _Metallic: 0
+    - _Metallic: 1
     - _Mode: 0
-    - _NormalScale: 1
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _Roughness: 0
     - _SmoothnessTextureChannel: 0
-    - _Specular: 0.22
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _StrokeSize: 0.38
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _AmbientColor: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
-    - _AmbientColorGround: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _FresnelColor: {r: 1, g: 0.9933167, b: 0.9685534, a: 1}
-    - _FresnelColorDown: {r: 1, g: 1, b: 1, a: 1}
-    - _HighLightColor: {r: 1, g: 1, b: 1, a: 1}
-    - _MainColor: {r: 1, g: 1, b: 1, a: 1}
-    - _SpecularColor: {r: 1, g: 0.60062885, b: 0.60062885, a: 1}
-    - _StrokeColor: {r: 0.14150941, g: 0.011672481, b: 0.008899948, a: 1}
   m_BuildTextureStacks: []
