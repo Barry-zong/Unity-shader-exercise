@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18346176, g: 0.22903882, b: 0.3058677, a: 1}
+  m_IndirectSpecularColor: {r: 0.18350323, g: 0.22906256, b: 0.3057407, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -392,7 +392,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 709577737}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.02215317, y: -0.3468016, z: -0.059775572, w: 0.9357697}
   m_LocalPosition: {x: 0, y: 1.08, z: -1.218}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -400,7 +400,7 @@ Transform:
   - {fileID: 485587451}
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -40.67, z: -7.31}
 --- !u!114 &709577739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -414,7 +414,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RotateObject: {fileID: 837377150}
-  degPerSec: 30
+  degPerSec: 25
   ModelRotateON: 0
   MDRotationReset: 0
   LightRotateON: 0
@@ -461,7 +461,6 @@ GameObject:
   m_Component:
   - component: {fileID: 906359907}
   - component: {fileID: 906359906}
-  - component: {fileID: 906359905}
   - component: {fileID: 906359904}
   m_Layer: 0
   m_Name: Main Camera_head
@@ -530,14 +529,6 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
---- !u!81 &906359905
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 906359903}
-  m_Enabled: 1
 --- !u!20 &906359906
 Camera:
   m_ObjectHideFlags: 0
@@ -548,7 +539,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 1, g: 0.86514044, b: 0.68553454, a: 1}
+  m_BackGroundColor: {r: 0.053399798, g: 0.06748687, b: 0.084905684, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -780,7 +771,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.05660379, g: 0.05660379, b: 0.05660379, a: 1}
+  m_BackGroundColor: {r: 0.05660379, g: 0.07058824, b: 0.08627451, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
