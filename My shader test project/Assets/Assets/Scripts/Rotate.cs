@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class Rotate : MonoBehaviour
 {
@@ -26,15 +28,23 @@ public class Rotate : MonoBehaviour
         }
         if (LightRotateON == true) 
         { 
-            transform. Rotate(0,degPerSec*0.004f,0);
+            LigRotate();
         }
         if (MDRotationReset == true)
         {
-            RotateObject.transform.rotation = Quaternion.identity;
+            LigResete();
         }
         if (LTRotationReset == true) 
         { 
             transform.transform.rotation = Quaternion.identity;
         }
+    }
+    public void LigRotate()
+    {
+       transform. Rotate(0,degPerSec*0.004f,0);
+    }
+    public void LigResete()
+    {
+       RotateObject.transform.rotation = Quaternion.identity;
     }
 }
